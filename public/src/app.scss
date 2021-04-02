@@ -5,13 +5,7 @@ $secondary: #606060;
 @import './_variables_&_mixins';
 
 @import './shared/_footer';
-// @import './shared/_home-images';
-// @import './shared/_landing';
-// @import './shared/_location';
-
-// @import './shared/_store-tour';
-// @import './shared/_testimonials';
-@import "./shared/header";
+@import './shared/_header';
 
 body {
   font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
