@@ -1,14 +1,14 @@
 // Variables
 // Background Colors
-
+$primaryBackgroundColor: white;
+$secondaryBackgroundColor: rgba(211, 211, 211, 0.6);
+$darkBackgroundColor: rgb(48,49,50);
 
 // Text Colors
-
-
-// Heights
-//$headerHeight: 13vh;
-//$footerHeight: 120px;
-
+$primaryTextColor: #303132;
+$secondaryTextColor: #242323;
+$highlightTextColor: #f1ff2e;
+$darkBackgroundTextColor: #d3d3d3;
 
 //Mixins
 @mixin flexCenter($direction) {

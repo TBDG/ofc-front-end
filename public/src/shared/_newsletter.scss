@@ -1,0 +1,11 @@
+#newsletter {
+    background: $darkBackgroundColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
