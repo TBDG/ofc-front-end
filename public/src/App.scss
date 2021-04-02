@@ -1,7 +1,7 @@
-.Header {
-  background-color: cadetblue;
-  height: 50vh;
-}
+//@import 'bootstrap/scss/bootstrap.scss';
+//@import './_variables_&_mixins';
+
+@import "./shared/header";
 
 .App {
   font-family: sans-serif;
@@ -64,5 +64,3 @@ nav {
 .slide-backward-exit-active {
   transform: translateX(100%);
 }
-
-/*# sourceMappingURL=App.css.map */
