@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import './App.css';
+import './app.scss';
 import Header from "./shared/header";
 import Footer from "./shared/footer";
 import routes from "./routes";

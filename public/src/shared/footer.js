@@ -1,4 +1,6 @@
 import React from 'react';
+import {useState, useEffect} from 'react';
+import Newsletter from './newsletter';
 import { AiFillFacebook } from 'react-icons/ai';
 //see documentation: https://react-icons.github.io/react-icons/
 import { AiOutlineInstagram } from 'react-icons/ai';
@@ -34,16 +36,27 @@ let footerVars = {
     socialMedia: [
         {
             name: (<AiFillFacebook className="footer-icon"/>),
-            link: 'https://www.facebook.com/thewaterfrontslc/photos/',
+            link: '#',
         },
         {
             name: (<AiOutlineInstagram className="footer-icon"/>),
-            link: 'https://www.instagram.com/thewaterfrontslc/',
+            link: '#',
         },
     ],
 };
 
 const Footer = () => {
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 650);
+  
+    const updateMedia = () => {
+      setDesktop(window.innerWidth > 650);
+    };
+  
+    useEffect(() => {
+      window.addEventListener("resize", updateMedia);
+      return () => window.removeEventListener("resize", updateMedia);
+    });
+
     //I'm leaving some unused code here in case our client decides he wants to have nav links in the footer.
     const itemMap = (arr, target) => {
         if (target) {
@@ -56,22 +69,69 @@ const Footer = () => {
         })
     }
 
-    return (
-        <div id='footer'>
+    const desktopFooter = (
+        <div id='footer' className='container-fluid'>
             {/* <p id='footer-nav'>
                 {itemMap(footerVars.nav)}
             </p>
             <p id='contact-us'>
                 {itemMap([{name: 'Contact Us', link: '#',}])}
             </p> */}
-
-            <div id='social-media'>
-                {itemMap(footerVars.socialMedia, true)}
+            <div id='sections' className='row'>
+                <div id='stay-connected' className='col'>
+                    <h3 >Stay Connected</h3>
+                    <div id='social-media'>
+                        {itemMap(footerVars.socialMedia, true)}
+                    </div>
+                </div>
+                <div id='be-our-friend' className='col-6'>
+                    <h3 >Be Our Friend</h3>
+                    <Newsletter />
+                </div>
+                <div id='need-assistance' className='col'>
+                    <h3 >Need Assistance?</h3>
+                    <p>801-707-4839</p>
+                </div>
             </div>
-            <br />
-            <p><AiOutlineCopyright /> 2021, The Waterfront SLC</p>
+            
+            <p><AiOutlineCopyright /> Our Fish Collective</p>
         </div>
-    )
+    );
+
+    const mobileFooter = (
+        <div id='footer' className='container-fluid'>
+            {/* <p id='footer-nav'>
+                {itemMap(footerVars.nav)}
+            </p>
+            <p id='contact-us'>
+                {itemMap([{name: 'Contact Us', link: '#',}])}
+            </p> */}
+            <div id='sections' className='col'>
+                <div id='stay-connected' className='col'>
+                    <h3 >Stay Connected</h3>
+                    <div id='social-media'>
+                        {itemMap(footerVars.socialMedia, true)}
+                    </div>
+                </div>
+                <div id='be-our-friend' className='col'>
+                    <h3 >Be Our Friend</h3>
+                    <Newsletter />
+                </div>
+                <div id='need-assistance' className='col'>
+                    <h3 >Need Assistance?</h3>
+                    <p>801-707-4839</p>
+                </div>
+            </div>
+            
+            <p><AiOutlineCopyright /> Our Fish Collective</p>
+        </div>
+    );
+   
+    return (
+      <div>
+        {isDesktop ? desktopFooter : mobileFooter}
+      </div>
+    );
 }
 
 export default Footer;

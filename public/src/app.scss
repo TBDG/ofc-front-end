@@ -1,24 +1,31 @@
+
 $secondary: #606060;
 
 @import 'bootstrap/scss/bootstrap.scss';
 @import './_variables_&_mixins';
 
 @import './shared/_footer';
-@import './shared/_header';
-@import './shared/_home-images';
-@import './shared/_landing';
-@import './shared/_location';
-@import './shared/_newsletter';
-@import './shared/_store-tour';
-@import './shared/_testimonials';
+// @import './shared/_header';
+// @import './shared/_home-images';
+// @import './shared/_landing';
+// @import './shared/_location';
+
+// @import './shared/_store-tour';
+// @import './shared/_testimonials';
 
 body {
     font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     color: $primaryTextColor;
+    font-family: "worksans-extralight","work sans",sans-serif;;
+}
+
+h2, h3, h4, h5, h6 {
+    color: $primaryTextColor;
+    font-family: "raleway",sans-serif;
 }
 
 .App {
@@ -26,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    width: 100%;
 }
 
 .content {

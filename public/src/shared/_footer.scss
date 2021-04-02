@@ -1,27 +1,52 @@
+@import './shared/_newsletter';
+
 #footer {
-    background-color: $secondaryBackgroundColor;
+    background-color: $darkBackgroundColor;
     font-size: 12px;
-    color: $secondaryTextColor;
-    text-align: right;
-    padding: 5%;
-    padding-top: 3%;
-    padding-bottom: 1%;
-    width: 100%;
-    border-top: $primaryBackgroundColor 1px solid;
+    color: $darkBackgroundTextColor;
+    text-align: center;
+    border-top: $secondaryBackgroundColor 1px solid;
     height: $footerHeight;
+    max-height: 200px;
+    padding-top: 15px;
+
+    h3 {
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 13px;
+        color: $darkBackgroundTextColor;
+    }
 
     p a {
-        color:  $secondaryTextColor;
-        font-size: 18px;
+        color:  white;
+        font-family: "raleway",sans-serif;
+        font-size: 13px;
     }
 
     .footer-icon {
         font-size: 30px;
-        margin: 0 0 0 20px;
-        color:  $secondaryTextColor;
+        margin: 0 10px 0 10px;
+        color:  $darkBackgroundTextColor;
     }
     
     a :hover {
         color: dimgray;
+    }
+
+    #sections {
+        margin: auto;
+        max-width: 1000px;
+        padding: 15px;
+    }
+
+    @media (max-width: 650px) {
+        overflow: auto;
+        height: 25%;
+        max-height: 300px;
+        
+        h3 {
+            padding-top: 5px;
+        }
     }
 }
