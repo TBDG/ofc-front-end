@@ -5,40 +5,86 @@ $secondary: #606060;
 @import './_variables_&_mixins';
 
 @import './shared/_footer';
-// @import './shared/_header';
 // @import './shared/_home-images';
 // @import './shared/_landing';
 // @import './shared/_location';
 
 // @import './shared/_store-tour';
 // @import './shared/_testimonials';
+@import "./shared/header";
 
 body {
-    font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
-    text-align: center;
+  font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  text-align: center;
 }
 
 h1 {
-    color: $primaryTextColor;
-    font-family: "worksans-extralight","work sans",sans-serif;;
+  color: $primaryTextColor;
+  font-family: "worksans-extralight","work sans",sans-serif;;
 }
 
 h2, h3, h4, h5, h6 {
-    color: $primaryTextColor;
-    font-family: "raleway",sans-serif;
+  color: $primaryTextColor;
+  font-family: "raleway",sans-serif;
 }
 
 .App {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    width: 100%;
+  text-align: center;
+  position: relative;
+  background-color: darkmagenta;
+  height: 50vh;
 }
 
-.content {
-    flex: 1;
-    display: block;
+nav {
+  height: 10vh;
+}
 
-    //min-height: calc(99vh - #{$headerHeight} - #{$footerHeight});
+.slide-forward-enter,
+.slide-forward-exit {
+  transition: transform 1000ms ease-out;
+}
+
+.slide-forward-enter {
+  transform: translateX(100%);
+}
+
+.slide-forward-enter.slide-forward-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-forward-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0%);
+}
+
+.slide-forward-exit-active {
+  transform: translateX(-100%);
+}
+
+.slide-backward-enter,
+.slide-backward-exit {
+  transition: transform 1000ms ease-out;
+}
+
+.slide-backward-enter {
+  transform: translateX(-100%);
+}
+
+.slide-backward-enter.slide-backward-enter-active {
+  transform: translateX(0%);
+}
+
+.slide-backward-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(0%);
+}
+
+.slide-backward-exit-active {
+  transform: translateX(100%);
 }
