@@ -10,11 +10,6 @@ $secondaryTextColor: #242323;
 $highlightTextColor: #f1ff2e;
 $darkBackgroundTextColor: #d3d3d3;
 
-// Heights
-$headerHeight: 13vh;
-$footerHeight: 25vh;
-
-
 //Mixins
 @mixin flexCenter($direction) {
   display: flex;

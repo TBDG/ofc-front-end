@@ -4,23 +4,22 @@ $secondary: #606060;
 @import 'bootstrap/scss/bootstrap.scss';
 @import './_variables_&_mixins';
 
-@import "./shared/header";
 @import './shared/_footer';
-
+@import "./shared/header";
 
 body {
-  font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
-  text-align: center;
+    font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+    text-align: center;
 }
 
 h1 {
-  color: $primaryTextColor;
-  font-family: "worksans-extralight","work sans",sans-serif;;
+    color: $primaryTextColor;
+    font-family: "worksans-extralight","work sans",sans-serif;;
 }
 
 h2, h3, h4, h5, h6 {
-  color: $primaryTextColor;
-  font-family: "raleway",sans-serif;
+    color: $primaryTextColor;
+    font-family: "raleway",sans-serif;
 }
 
 .App {
@@ -86,11 +85,4 @@ nav {
 
 .slide-backward-exit-active {
   transform: translateX(100%);
-}
-
-
-.content {
-  flex: 1;
-  display: block;
-
 }
