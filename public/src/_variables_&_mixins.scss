@@ -1,0 +1,19 @@
+// Variables
+// Background Colors
+
+
+// Text Colors
+
+
+// Heights
+//$headerHeight: 13vh;
+//$footerHeight: 120px;
+
+
+//Mixins
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}

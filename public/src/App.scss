@@ -1,10 +1,12 @@
-//@import 'bootstrap/scss/bootstrap.scss';
-//@import './_variables_&_mixins';
+//noinspection CssUnknownTarget
+@import 'bootstrap/scss/bootstrap.scss';
+@import './_variables_&_mixins';
 
 @import "./shared/header";
+@import "./shared/landing";
 
 .App {
-  font-family: sans-serif;
+  font-family: worksans-semibold,work sans,sans-serif;
   text-align: center;
   position: relative;
   background-color: darkmagenta;
