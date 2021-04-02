@@ -4,7 +4,7 @@ function Landing() {
             <div className="background">
                 <div className="container ">
                     <div className="row two-bits">
-                        <div className="col-3 categories">
+                        <div className="col-sm-12 col-lg-3 categories">
                             <div className="fish individual">
                                 <p>FISH</p>
                                 <button> Shop Now</button>
@@ -22,7 +22,7 @@ function Landing() {
                                 <button> Show More..</button>
                             </div>
                         </div>
-                        <div className="col-8 featured-breeder">
+                        <div className="col-sm-10 col-lg-8 featured-breeder">
                             <div className="row breeder-banner"> FEATURED
                                 <img alt="Breeder Logo"
                                      src={"https://static.wixstatic.com/media/9f767a_c456fbfeb0694679b91dfbf6e3e01aef~mv2.png/v1/crop/x_266,y_0,w_748,h_720/fill/w_161,h_155,al_c,q_85,usm_0.66_1.00_0.01/Lav's%20Snail%20Sales%20logo.webp"}/> BREEDER
