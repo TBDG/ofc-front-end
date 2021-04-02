@@ -40,13 +40,6 @@ class Newsletter extends Component {
         return (
             <div id="newsletter">
                 <div className="container">
-                    {/* <div className="row">
-                        <h3 className="col-12">Subscribe to our newsletter</h3>
-                    </div>
-
-                    <div className="row">
-                        <p className="col-12">Promotions, new products, and sales. Directly to your inbox.</p>
-                    </div> */}
 
                     <form onSubmit={this.handleSubmit}>
                         <div className="row">

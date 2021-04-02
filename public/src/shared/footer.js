@@ -68,69 +68,34 @@ const Footer = () => {
             } else { return <a href={e.link}> • {e.name}</a>};
         })
     }
-
-    const desktopFooter = (
-        <div id='footer' className='container-fluid'>
-            {/* <p id='footer-nav'>
-                {itemMap(footerVars.nav)}
-            </p>
-            <p id='contact-us'>
-                {itemMap([{name: 'Contact Us', link: '#',}])}
-            </p> */}
-            <div id='sections' className='row'>
-                <div id='stay-connected' className='col'>
-                    <h3 >Stay Connected</h3>
-                    <div id='social-media'>
-                        {itemMap(footerVars.socialMedia, true)}
-                    </div>
-                </div>
-                <div id='be-our-friend' className='col-6'>
-                    <h3 >Be Our Friend</h3>
-                    <Newsletter />
-                </div>
-                <div id='need-assistance' className='col'>
-                    <h3 >Need Assistance?</h3>
-                    <p>801-707-4839</p>
-                </div>
-            </div>
-            
-            <p><AiOutlineCopyright /> Our Fish Collective</p>
-        </div>
-    );
-
-    const mobileFooter = (
-        <div id='footer' className='container-fluid'>
-            {/* <p id='footer-nav'>
-                {itemMap(footerVars.nav)}
-            </p>
-            <p id='contact-us'>
-                {itemMap([{name: 'Contact Us', link: '#',}])}
-            </p> */}
-            <div id='sections' className='col'>
-                <div id='stay-connected' className='col'>
-                    <h3 >Stay Connected</h3>
-                    <div id='social-media'>
-                        {itemMap(footerVars.socialMedia, true)}
-                    </div>
-                </div>
-                <div id='be-our-friend' className='col'>
-                    <h3 >Be Our Friend</h3>
-                    <Newsletter />
-                </div>
-                <div id='need-assistance' className='col'>
-                    <h3 >Need Assistance?</h3>
-                    <p>801-707-4839</p>
-                </div>
-            </div>
-            
-            <p><AiOutlineCopyright /> Our Fish Collective</p>
-        </div>
-    );
    
     return (
-      <div>
-        {isDesktop ? desktopFooter : mobileFooter}
-      </div>
+        <div id='footer' className='container-fluid'>
+            {/* <p id='footer-nav'>
+                {itemMap(footerVars.nav)}
+            </p>
+            <p id='contact-us'>
+                {itemMap([{name: 'Contact Us', link: '#',}])}
+            </p> */}
+            <div id='sections' className={isDesktop ? 'row' : 'col'}>
+                <div id='stay-connected' className='col'>
+                    <h3 >Stay Connected</h3>
+                    <div id='social-media'>
+                        {itemMap(footerVars.socialMedia, true)}
+                    </div>
+                </div>
+                <div id='be-our-friend' className={isDesktop ? 'col-6' : 'col'}>
+                    <h3 >Be Our Friend</h3>
+                    <Newsletter />
+                </div>
+                <div id='need-assistance' className='col'>
+                    <h3 >Need Assistance?</h3>
+                    <p>801-707-4839</p>
+                </div>
+            </div>
+            
+            <p><AiOutlineCopyright /> Our Fish Collective</p>
+        </div>
     );
 }
 
