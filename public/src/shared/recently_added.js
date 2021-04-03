@@ -1,3 +1,10 @@
+import test1 from './test_images/test1.jpg';
+import test2 from './test_images/test2.jpg';
+import test3 from './test_images/test3.jpg';
+import test4 from './test_images/test4.jpg';
+import test5 from './test_images/test1.jpg';
+import test6 from './test_images/test6.jpg';
+
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 //see documentation: https://www.npmjs.com/package/react-multi-carousel
@@ -16,23 +23,24 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
 const RecentlyAdded = () => {
     const testImages = [
         [
-            './test_images/test1.jpg', 'Fish 1',
+            test1, 'Fish 1',
         ], [
-            './test_images/test2.jpg', 'Fish 2',
+            test2, 'Fish 2',
         ], [
-            './test_images/test3.jpg', 'Fish 3',
+            test3, 'Fish 3',
         ], [
-            './test_images/test4.jpg', 'Fish 4',
+            test4, 'Fish 4',
         ], [
-            './test_images/test5.jpg', 'Fish 5',
+            test5, 'Fish 5',
         ], [
-            './test_images/test6.jpg', 'Fish 6',
+            test6, 'Fish 6',
         ], 
     ];
 
     const testImagesMap = (testImages) => {
         return testImages.map((e) => {
-            return (<div className='item-block'>
+            return (
+            <div className='test-item-block'>
                 <img src={e[0]} alt='' className='image'/>
                 <p className='details'>— {e[1]}</p>
             </div>)
@@ -65,15 +73,8 @@ const RecentlyAdded = () => {
     }
 
     return (
-        <div
-            id="testimonials"
-            style={{
-                paddingBottom: '30px',
-                paddingTop: '30px',
-                position: 'relative',
-            }}
-        >
-            <h3 className='testimonials-title' >Recently Added!</h3>
+        <div id="recently-added">
+            <p id='recently-added-title' >Recently Added!</p>
             <Carousel
                 additionalTransfrom={0}
                 arrows
@@ -99,11 +100,9 @@ const RecentlyAdded = () => {
                 swipeable
             >
                 {itemsMap(testImagesMap(testImages))}
-
             </Carousel>
         </div>
     );
 };
-
 
 export default RecentlyAdded;
