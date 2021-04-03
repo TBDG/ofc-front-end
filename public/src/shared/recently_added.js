@@ -21,6 +21,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
 };
 
 const RecentlyAdded = () => {
+    //added to test feature. will be replaced later.
     const testImages = [
         [
             test1, 'Fish 1',
@@ -37,6 +38,7 @@ const RecentlyAdded = () => {
         ], 
     ];
 
+    //added to test feature. will be replaced later.
     const testImagesMap = (testImages) => {
         return testImages.map((e) => {
             return (
@@ -58,7 +60,7 @@ const RecentlyAdded = () => {
             items: 4,
         },
         tablet: {
-            breakpoint: {max: 1024, min: 464},
+            breakpoint: {max: 1024, min: 550},
             items: 3,
         },
         mobile: {
