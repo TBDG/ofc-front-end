@@ -2,7 +2,7 @@
 import './App.scss';
 import Header from "./shared/header";
 import Footer from "./shared/footer";
-import RecentlyAdded from './shared/recentlyAdded';
+import RecentlyAdded from './shared/recently_added';
 import {BrowserRouter, Link, Route, Switch, withRouter} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import React from "react";
