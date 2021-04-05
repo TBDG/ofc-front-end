@@ -6,6 +6,7 @@ import RecentlyAdded from './shared/recently_added';
 import {BrowserRouter, Link, Route, Switch, withRouter} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import React from "react";
+import Landing from "./shared/landing";
 
 function App() {
     const routes = ["/", "/header"]
@@ -42,6 +43,7 @@ function App() {
                 <Link to={'/header'}> Header </Link>
                 {/*Example for routing^^^^^^ (remove when some routes are set up)*/}
                 <RecentlyAdded/>
+                <Landing />
                 <Footer/>
             </BrowserRouter>
         </div>

@@ -1,0 +1,179 @@
+
+.background {
+  background-image: url(images/ofclanding.webp);
+  background-position: center center;
+  background-size: cover;
+  min-height: 70vh;
+  @include flexCenter(row);
+}
+
+.two-bits {
+  @include flexCenter(column);
+}
+
+.categories {
+  @include flexCenter(column);
+  padding: 15px;
+
+  .individual {
+    @include flexCenter(column);
+    background-color: rgba(245, 238, 238, 0.5);
+    height: 15vh;
+    width: 100%;
+    margin: 5px;
+    letter-spacing: 2px;
+
+    p {
+      font-size: 32px;
+      font-weight: bold;
+      color: #303132;
+      margin: auto;
+    }
+
+    button {
+      border: 0;
+      background-color: #303132;
+      color: white;
+      width: 60vw;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.featured-breeder {
+  background-color: rgba(245, 238, 238, 0.5);
+  width: 96vw;
+
+  .breeder-banner {
+    @include flexCenter(column);
+    background-color: rgba(245, 238, 238, 0.8);
+    font-size: 40px;
+  }
+
+  .featured-products {
+    @include flexCenter(row);
+    justify-content: space-evenly;
+    padding-top: 20px;
+
+    .featured-card {
+      p {
+        margin: 0;
+      }
+
+      .details-container {
+        height: 14vh;
+        font-family: eb Garamond;
+        font-size: 22px;
+        @include flexCenter(column);
+
+        .view-details {
+          opacity: 0.0;
+
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .two-bits {
+    @include flexCenter(row);
+    justify-content: space-around;
+  }
+
+  .categories {
+    justify-content: space-between;
+    height: 60vh;
+    padding: 0;
+
+    .individual {
+      height: 12vh;
+      margin: 20px;
+      padding: 0px 15px 0px 15px;
+
+      p {
+        font-size: 28px;
+      }
+
+      button {
+        width: 10vw;
+        font-size: 20px;
+        transition-duration: 0.4s;
+      }
+
+      button:hover {
+        background-color: #fbfc01;
+        color: #303132;
+      }
+    }
+
+    .fish {
+      margin-top: 0px;
+    }
+
+    .more {
+      margin-bottom: 0px;
+    }
+  }
+
+  .featured-breeder {
+    height: 60vh;
+
+    .breeder-banner {
+      @include flexCenter(row);
+      justify-content: space-around;
+      height: 16vh;
+    }
+
+    .featured-products {
+      height: 44vh;
+      padding-top: 5px;
+
+      .featured-card {
+
+        .details-container {
+
+          .details {
+            transition-property: opacity;
+            transition-duration: 0.5s;
+          }
+
+          .view-details {
+            position: relative;
+            top: -4vh;
+            width: 60%;
+            transition-property: opacity;
+            transition-duration: 0.8s;
+
+            p {
+              border: #86681e 2px solid;
+            }
+          }
+        }
+      }
+
+      .featured-card:hover {
+
+        .details-container {
+          background-color: rgba(245, 238, 238, 0.8);
+
+          .details {
+            opacity: 0.0;
+          }
+
+          .view-details {
+            opacity: 1;
+            //background-color: rgba(245, 238, 238, 0.8);
+
+          }
+        }
+      }
+    }
+  }
+}
