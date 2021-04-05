@@ -42,8 +42,8 @@ function App() {
                 {/*<Header/>*/}
                 <Link to={'/header'}> Header </Link>
                 {/*Example for routing^^^^^^ (remove when some routes are set up)*/}
-                <RecentlyAdded/>
                 <Landing />
+                <RecentlyAdded/>
                 <Footer/>
             </BrowserRouter>
         </div>

@@ -60,11 +60,11 @@ const RecentlyAdded = () => {
             items: 4,
         },
         tablet: {
-            breakpoint: {max: 1024, min: 550},
+            breakpoint: {max: 1024, min: 650},
             items: 3,
         },
         mobile: {
-            breakpoint: {max: 550, min: 0},
+            breakpoint: {max: 650, min: 0},
             items: 2,
         },
     };
