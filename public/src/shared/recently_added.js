@@ -76,7 +76,7 @@ const RecentlyAdded = () => {
 
     return (
         <div id="recently-added">
-            <p id='recently-added-title' >Recently Added!</p>
+            <h1 id='recently-added-title' >Recently Added!</h1>
             <Carousel
                 additionalTransfrom={0}
                 arrows
