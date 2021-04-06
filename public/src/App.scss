@@ -2,10 +2,11 @@
 $secondary: #606060;
 
 @import 'bootstrap/scss/bootstrap.scss';
-@import './_variables_&_mixins';
+@import './variables_&_mixins';
 
-@import './shared/_footer';
+@import './shared/footer';
 @import "./shared/header";
+@import './shared/recently_added';
 @import "./shared/landing";
 
 body {
@@ -15,7 +16,7 @@ body {
 
 h1 {
     color: $primaryTextColor;
-    font-family: "worksans-extralight","work sans",sans-serif;;
+    font-family: "worksans-extralight","work sans",sans-serif;
 }
 
 h2, h3, h4, h5, h6 {

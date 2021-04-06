@@ -2,6 +2,7 @@
 import './App.scss';
 import Header from "./shared/header";
 import Footer from "./shared/footer";
+import RecentlyAdded from './shared/recently_added';
 import {BrowserRouter, Link, Route, Switch, withRouter} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import React from "react";
@@ -42,6 +43,7 @@ function App() {
                 <Link to={'/header'}> Header </Link>
                 {/*Example for routing^^^^^^ (remove when some routes are set up)*/}
                 <Landing />
+                <RecentlyAdded/>
                 <Footer/>
             </BrowserRouter>
         </div>
