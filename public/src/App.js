@@ -2,13 +2,15 @@
 import './App.scss';
 import Header from "./shared/header";
 import Footer from "./shared/footer";
-import {BrowserRouter, Link, Route, Switch, withRouter} from "react-router-dom";
+import Blank from "./shared/blank"
+import {BrowserRouter, Route, Switch, withRouter} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import React from "react";
 import Landing from "./shared/landing";
 
 function App() {
-    const routes = ["/", "/header"]
+    const routes = ["/", "/header", "/blank"]
+    // ***Example setup ^^^ add route in array***
 
     const AnimatedSwitch = withRouter(({location}) => {
         const currentScreen = routes.indexOf(location.pathname),
@@ -22,10 +24,11 @@ function App() {
                 <CSSTransition
                     key={location.key}
                     classNames="slide"
-                    timeout={1000}>
+                    timeout={100000}>
                     <Switch location={location}>
-                        <Route exact path='/'/>
+                        <Route exact path='/' component={Landing}/>
                         <Route path='/header' component={Header}/>
+                        <Route path='/blank' component={Blank}/>
                         {/*<Route path='/fish' component={Fish} />*/}
                         {/*Example setup ^^^^^^*/}
                     </Switch>
@@ -36,14 +39,11 @@ function App() {
 
     return (
         <div className="App">
+            <Header/>
             <BrowserRouter>
                 <AnimatedSwitch/>
-                {/*<Header/>*/}
-                <Link to={'/header'}> Header </Link>
-                {/*Example for routing^^^^^^ (remove when some routes are set up)*/}
-                <Landing />
-                <Footer/>
             </BrowserRouter>
+            <Footer/>
         </div>
     );
 }

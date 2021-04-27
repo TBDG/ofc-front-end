@@ -1,4 +1,204 @@
 .Header {
-  background-color: cadetblue;
-  height: 50vh;
+  background-color: black;
+  color: white;
+  height: $headerHeightMobile;
+  @include flexCenter(row)
+}
+
+.mobile-view-container {
+  @include flexCenter(row);
+  justify-content: space-between;
+
+  .mobile-menu {
+    font-size: 36px;
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    z-index: 200;
+
+    .pop-out-menu {
+      font-size: 22px;
+      @include flexCenter(column);
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-left: 40px;
+      padding-top: 12vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #535151;
+      list-style: none;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in;
+
+      .mobile-links {
+        li {
+          text-align: left;
+        }
+      }
+
+      .children {
+        list-style: none;
+        height: 100%;
+        text-align: left;
+
+        a {
+          color: #322b29;
+        }
+      }
+
+      .mobile-login {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 25px;
+
+      }
+
+      .mobile-close-menu {
+        position: absolute;
+        font-size: 30px;
+        top: 45px;
+        width: 45px;
+        background-color: white;
+      }
+
+      li {
+        margin-top: 20px;
+      }
+    }
+
+    .pop-out-menu.open {
+      transform: translateX(0);
+    }
+  }
+
+  .icons {
+    font-size: 38px;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+
+    .user-wrapper {
+      display: none;
+    }
+  }
+}
+
+.banner {
+  @include flexCenter(column);
+
+  .logo {
+    padding-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 35px;
+    line-height: 95%;
+    color: white;
+  }
+
+  .desktop-links {
+    display: none;
+  }
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #c87f78;
+}
+
+//------------------------------------------------------------------------------------//
+@media only screen and (min-width: 1200px) {
+
+  .Header {
+    height: $headerHeight;
+  }
+
+  .mobile-view-container {
+    .mobile-menu {
+      display: none;
+
+      .pop-out-menu {
+        display: none;
+      }
+    }
+
+    .icons {
+      font-size: 18px;
+      @include flexCenter(row);
+      top: 5px;
+
+      .user-wrapper {
+        @include flexCenter(row);
+        padding: 10px;
+
+        .user-icon {
+          font-size: 26px;
+        }
+
+        p {
+          margin: 0 auto;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  .banner {
+    .logo-statement {
+      @include flexCenter(row);
+      letter-spacing: 0.33em;
+    }
+
+    .desktop-links {
+      @include flexCenter(row);
+      width: 80%;
+      margin-left: 10vw;
+      margin-top: -7vh;
+      font-size: smaller;
+
+      .links {
+        list-style-type: none;
+        width: 100%;
+
+        .link:hover {
+          color: #fefe00;
+
+          a:hover {
+            color: #fefe00;
+          }
+        }
+
+        nav {
+          @include flexCenter(row);
+        }
+
+        .dropdown {
+          list-style-type: none;
+          position: absolute;
+          background-color: #535151;
+          padding: 0;
+          min-width: 70px;
+          @include flexCenter(column);
+          z-index: 100;
+
+          li {
+            margin: 5px 0px;
+            padding: 3px;
+            font-size: small;
+          }
+
+          li:hover {
+            color: #fefe00;
+          }
+        }
+      }
+    }
+  }
 }
