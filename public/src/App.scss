@@ -10,8 +10,8 @@ $secondary: #606060;
 @import "./shared/landing";
 
 body {
-    font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
-    text-align: center;
+  font-family: "worksans-extralight","work sans",sans-serif;
+  text-align: center;
 }
 
 h1 {
@@ -22,6 +22,10 @@ h1 {
 h2, h3, h4, h5, h6 {
     color: $primaryTextColor;
     font-family: "raleway",sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .App {
@@ -62,6 +66,7 @@ nav {
 
 .slide-forward-exit-active {
   transform: translateX(-100%);
+  margin-top: $headerHeight;
 }
 
 .slide-backward-enter,
@@ -87,4 +92,16 @@ nav {
 
 .slide-backward-exit-active {
   transform: translateX(100%);
+  margin-top: $headerHeight;
+}
+.divvy-div {
+  height: 60vh;
+  background-color: #303132;
+  color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+  .slide-forward-exit-active .slide-backward-exit-active{
+    margin-top: $headerHeight;
+  }
 }
