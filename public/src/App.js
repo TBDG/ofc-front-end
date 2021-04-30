@@ -43,7 +43,6 @@ function App() {
             <Header/>
             <BrowserRouter>
                 <AnimatedSwitch/>
-                <Landing/>
                 <RecentlyAdded/>
             </BrowserRouter>
             <Footer/>
