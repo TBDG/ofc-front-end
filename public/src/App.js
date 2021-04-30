@@ -2,6 +2,7 @@
 import './App.scss';
 import Header from "./shared/header";
 import Footer from "./shared/footer";
+import RecentlyAdded from './shared/recently_added';
 import Blank from "./shared/blank"
 import {BrowserRouter, Route, Switch, withRouter} from "react-router-dom";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
@@ -24,7 +25,7 @@ function App() {
                 <CSSTransition
                     key={location.key}
                     classNames="slide"
-                    timeout={100000}>
+                    timeout={1000}>
                     <Switch location={location}>
                         <Route exact path='/' component={Landing}/>
                         <Route path='/header' component={Header}/>
@@ -42,6 +43,8 @@ function App() {
             <Header/>
             <BrowserRouter>
                 <AnimatedSwitch/>
+                <Landing/>
+                <RecentlyAdded/>
             </BrowserRouter>
             <Footer/>
         </div>
