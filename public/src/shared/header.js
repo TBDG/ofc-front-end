@@ -2,83 +2,84 @@ import {useState} from "react"
 import {Link} from "react-router-dom";
 import {AiOutlineMenu, BsBag, IoPersonCircle, GrClose} from "react-icons/all";
 
+const links = [
+    {
+        title: "Home",
+        link: "",
+        key: "home",
+    }, {
+        title: "Shop",
+        link: "",
+        key: "shop",
+        children: [
+            {
+                title: "Fish",
+                link: ""
+            }, {
+                title: "Inverts",
+                link: ""
+            }, {
+                title: "Plants",
+                link: ""
+            }, {
+                title: "Merch",
+                link: ""
+            }]
+    }, {
+        title: "Pick Your Breeder",
+        link: "",
+        key: "breeder",
+        children: [
+            {
+                title: "Guppy Guru",
+                link: ""
+            }
+        ]
+    }, {
+        title: "Become A Breeder",
+        link: "",
+        key: "becomeABreeder",
+    }, {
+        title: "OFC Media",
+        link: "",
+        key: "media",
+    }, {
+        title: "More",
+        link: "",
+        key: "more",
+        children: [{
+            title: "OFC Members",
+            link: ""
+        }, {
+            title: "Getting Started",
+            link: ""
+        }, {
+            title: "How We Ship",
+            link: ""
+        }, {
+            title: "Products for Sellers",
+            link: ""
+        }, {
+            title: "Add New Product",
+            link: ""
+        }, {
+            title: "Member Support",
+            link: ""
+        }, {
+            title: "Customer Care",
+            link: ""
+        }, {
+            title: "Forum",
+            link: ""
+        }]
+    }
+]
+
 function Header() {
     const [isShown, setIsShown] = useState({})
     const [sideMenu, setSideMenu] = useState(false)
     const [dropdownOpen, setDropdownOpen] = useState(false)
 
-    const links = [
-        {
-            title: "Home",
-            link: "",
-            key: "home",
-        }, {
-            title: "Shop",
-            link: "",
-            key: "shop",
-            children: [
-                {
-                    title: "Fish",
-                    link: ""
-                }, {
-                    title: "Inverts",
-                    link: ""
-                }, {
-                    title: "Plants",
-                    link: ""
-                }, {
-                    title: "Merch",
-                    link: ""
-                }]
-        }, {
-            title: "Pick Your Breeder",
-            link: "",
-            key: "breeder",
-            children: [
-                {
-                    title: "Guppy Guru",
-                    link: ""
-                }
-            ]
-        }, {
-            title: "Become A Breeder",
-            link: "",
-            key: "becomeABreeder",
-        }, {
-            title: "OFC Media",
-            link: "",
-            key: "media",
-        }, {
-            title: "More",
-            link: "",
-            key: "more",
-            children: [{
-                title: "OFC Members",
-                link: ""
-            }, {
-                title: "Getting Started",
-                link: ""
-            }, {
-                title: "How We Ship",
-                link: ""
-            }, {
-                title: "Products for Sellers",
-                link: ""
-            }, {
-                title: "Add New Product",
-                link: ""
-            }, {
-                title: "Member Support",
-                link: ""
-            }, {
-                title: "Customer Care",
-                link: ""
-            }, {
-                title: "Forum",
-                link: ""
-            }]
-        }
-    ]
     const childMap = (children) => {
         return children.map((child) => {
             return (
